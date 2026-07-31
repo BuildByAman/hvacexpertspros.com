@@ -1943,15 +1943,6 @@ ph { display: inline-flex; align-items: center; }
   .mobile-nav-links {
     list-style: none;
     padding: 0;
-  
-
-  .mobile-menu.open {
-    max-height: 500px;
-  }
-
-  .mobile-nav-links {
-    list-style: none;
-    padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
