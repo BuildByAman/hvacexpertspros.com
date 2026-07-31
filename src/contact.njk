@@ -311,6 +311,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   
   const form = this;
   const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
   
   // Disable button to prevent double submit
   const btn = form.querySelector('button[type="submit"]');
@@ -320,9 +321,16 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     btn.innerHTML = 'Sending...';
   }
 
-  fetch('https://leadslytic.com/api/f/20c5e82a-52f4-43c9-b0d3-c90ba2e69b2d', {
+  // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+  const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+
+  fetch(scriptURL, {
     method: 'POST',
-    body: formData
+    mode: 'no-cors',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8',
+    }
   }).then(response => {
     // Show Toast
     showToast('Your request has been successfully sent! We will contact you shortly.');
