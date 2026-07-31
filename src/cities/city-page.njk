@@ -339,15 +339,24 @@ eleventyComputed:
             {{ item.state.name }} communities with same day and 24/7 emergency plumbing.
           </p>
         </div>
+        </div>
         <div class="about-mini">
           <div class="mini-card">
-            <h4><i class="ph ph-house-line" style="font-size:14px"></i> Residential</h4>
-            <p>Full plumbing services for homes and apartments in {{ item.city.name }}.</p>
+            <h4><i class="ph ph-house-line" style="font-size:14px"></i> Residential Plumbing</h4>
+            <p>Full-service residential plumbing repair, installation, and maintenance for homes in {{ item.city.name }}.</p>
           </div>
           <div class="mini-card">
-            <h4><i class="ph ph-buildings" style="font-size:14px"></i> Commercial</h4>
-            <p>Fast commercial plumbing to minimize business downtime in {{ item.city.name }}.</p>
+            <h4><i class="ph ph-buildings" style="font-size:14px"></i> Commercial Plumbing</h4>
+            <p>Fast commercial plumbing company services to minimize business downtime in {{ item.city.name }}, {{ item.state.abbr }}.</p>
           </div>
+        </div>
+
+        {# ── SEO Target Keywords Block ── #}
+        <div class="seo-keywords-block" style="margin-top:30px;padding:20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+          <h3 style="font-size:18px;margin-bottom:10px;"><i class="ph ph-magnifying-glass" style="color:var(--primary)"></i> Need a Local Plumber Near You in {{ item.city.name }}?</h3>
+          <p style="font-size:14px;color:#475569;line-height:1.6;">
+            Whether you are searching for an <strong>emergency plumber near me</strong>, a <strong>24 hour plumber</strong> for late-night leaks, or a <strong>same day plumber</strong> for urgent repairs, {{ site.BRAND }} connects you with licensed professionals. We handle everything from <strong>plumbing installation</strong> and <strong>plumbing repair</strong> to finding the right <strong>plumbing supply near me</strong> in {{ item.city.name }}, {{ item.state.abbr }}. Call <a href="{{ site.PHONE_HREF }}" style="font-weight:700;color:var(--primary)">{{ site.PHONE }}</a> today for fast, upfront <strong>plumber quotes near me</strong>!
+          </p>
         </div>
       </div>
     </div>

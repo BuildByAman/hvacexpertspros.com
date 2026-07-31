@@ -64,6 +64,34 @@
   {# ── Inline Critical Stylesheet — zero render blocking ── #}
   <style>{% inlinecss %}</style>
 
+  {# SiteNavigationElement Schema for Google Sitelinks #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.DOMAIN }}/#website",
+        "url": "{{ site.DOMAIN }}/",
+        "name": "{{ site.BRAND }}",
+        "description": "24/7 Emergency Plumbing Services Nationwide"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "@id": "{{ site.DOMAIN }}/#navigation",
+        "name": ["About Us", "Contact Us", "Services", "Privacy Policy", "Terms & Conditions"],
+        "url": [
+          "{{ site.DOMAIN }}/about/",
+          "{{ site.DOMAIN }}/contact/",
+          "{{ site.DOMAIN }}/services/",
+          "{{ site.DOMAIN }}/privacy-policy/",
+          "{{ site.DOMAIN }}/terms-conditions/"
+        ]
+      }
+    ]
+  }
+  </script>
+
   {# JSON-LD Schemas injected from page data #}
   {% if schemas %}
     {% for schema in schemas %}
