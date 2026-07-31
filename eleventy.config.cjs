@@ -22,12 +22,8 @@ module.exports = function (eleventyConfig) {
   });
   // --------------------------------------------------------------
   // ── Passthrough copies ──────────────────────────────────────────────────
-  if (process.env.BUILD_TYPE !== 'state') {
-    // Copy contents of public/ folder to root of _site/
-    eleventyConfig.addPassthroughCopy({ "public": "/" });
-    // Copy existing CSS from styles/ into _site/css/
-    eleventyConfig.addPassthroughCopy({ "styles/globals.css": "css/globals.css" });
-  }
+  eleventyConfig.addPassthroughCopy({ "public": "/" });
+  eleventyConfig.addPassthroughCopy({ "styles/globals.css": "css/globals.css" });
 
   // ── Nunjucks options ────────────────────────────────────────────────────
   eleventyConfig.setNunjucksEnvironmentOptions({
