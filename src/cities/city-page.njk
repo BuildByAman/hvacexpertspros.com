@@ -390,7 +390,7 @@ eleventyComputed:
 <div class="rs-map">
   <div class="container">
     <div class="map-frame">
-      <iframe src="https://maps.google.com/maps?q={{ item.city.name | urlencode }}%2C%20{{ item.state.abbr | urlencode }}%20USA&t=&z=12&ie=UTF8&iwloc=&output=embed" width="100%" height="360" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of {{ item.city.name }}, {{ item.state.abbr }}"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m2!2m1!1s{{ item.city.name | urlencode }}%2C+{{ item.state.abbr | urlencode }}" width="100%" height="360" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of {{ item.city.name }}, {{ item.state.abbr }}"></iframe>
     </div>
   </div>
 </div>
