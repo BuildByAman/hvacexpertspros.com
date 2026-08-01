@@ -14,16 +14,15 @@
 /css/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Images - 30 days with stale-while-revalidate
-/assets/images/*
-  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+# Assets & Images - 1 year immutable
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
 
-# SVG / ICO - 30 days
 /*.svg
-  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Cache-Control: public, max-age=31536000, immutable
 
 /*.ico
-  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Cache-Control: public, max-age=31536000, immutable
 
 # Sitemaps - 6 hours
 /sitemap*.xml
