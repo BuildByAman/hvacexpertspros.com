@@ -63,7 +63,9 @@ export default {
     nearbyCities: (data) => {
       const stateObj = statesData.find(s => s.slug === data.item.state.slug);
       if (!stateObj) return [];
-      return stateObj.cities.filter(c => c.slug !== data.item.city.slug).slice(0, 14);
+      const otherCities = stateObj.cities.filter(c => c.slug !== data.item.city.slug);
+      const rand = getSeededRandom(`nearby-${data.item.city.slug}`);
+      return shuffleArray(otherCities, rand).slice(0, 16);
     },
     faqs: (data) => {
       const city = data.item.city;
