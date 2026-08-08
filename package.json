@@ -1,10 +1,10 @@
 {
-  "name": "local-electrician-emergency",
+  "name": "plumberproslocal-aman",
   "version": "1.0.0",
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "node --max-old-space-size=8192 scripts/build.js",
     "dev": "node --max-old-space-size=8192 node_modules/@11ty/eleventy/cmd.cjs --serve --incremental",
     "start": "node --max-old-space-size=8192 node_modules/@11ty/eleventy/cmd.cjs --serve"
   },
