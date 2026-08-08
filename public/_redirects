@@ -1,0 +1,11 @@
+# Redirect www to non-www
+https://www.plumberproslocal.com/* https://plumberproslocal.com/:splat 301!
+
+# Fix 404 Service URL Mappings
+/services/leak-detection-repair/ /services/pipe-leak-repair/ 301
+/services/leak-detection-repair /services/pipe-leak-repair/ 301
+
+# Fix 404 Search & Legacy URLs
+/search /services/ 301
+/terms /terms-conditions/ 301
+/terms/ /terms-conditions/ 301
