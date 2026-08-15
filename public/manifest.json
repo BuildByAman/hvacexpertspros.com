@@ -1,7 +1,7 @@
 {
-  "name": "Plumber Pros Local",
-  "short_name": "PlumberPros",
-  "description": "Top-rated local plumbing services across the USA. 24/7 emergency plumbing, drain cleaning, water heater repair and more.",
+  "name": "HVAC Experts Pros",
+  "short_name": "HVACExperts",
+  "description": "Top-rated local AC repair services across the USA. 24/7 emergency AC repair, drain cleaning, water heater repair and more.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#060e1f",

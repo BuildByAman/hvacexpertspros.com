@@ -1,7 +1,7 @@
 ---
 layout: layout.njk
-title: "Top-Rated Local Plumbers Near You | 24/7 Emergency Plumbing Services"
-description: "Need a local plumber near you? We provide 24/7 emergency plumbing services, fast drain cleaning, water heater repairs, and leak detection. Call our licensed plumbing experts today!"
+title: "Top-Rated Local AC Technicians Near You | 24/7 Emergency AC Repair Services"
+description: "Need a local AC technician near you? We provide 24/7 emergency AC repair services, fast drain cleaning, water heater repairs, and leak detection. Call our licensed AC repair experts today!"
 ---
 
 {# ── JSON-LD Schemas ────────────────────────────────────────────────────── #}
@@ -16,7 +16,7 @@ description: "Need a local plumber near you? We provide 24/7 emergency plumbing 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Plumber",
+  "@type": "AC Technician",
   "name": "{{ site.BRAND }}",
   "url": "{{ site.DOMAIN }}/",
   "image": "{{ site.DOMAIN }}/favicon.svg",
@@ -44,58 +44,66 @@ description: "Need a local plumber near you? We provide 24/7 emergency plumbing 
 
 {# ── Service Icon Map ──────────────────────────────────────────────────── #}
 {% set serviceIcons = {
-  'emergency-plumber': 'ph-siren',
+  'emergency-AC technician': 'ph-siren',
   'wiring-rewiring': 'ph-lightbulb',
   'water-heater-repair': 'ph-thermometer',
-  'plumbing-panel-upgrade': 'ph-circuit-board',
+  'AC repair-panel-upgrade': 'ph-circuit-board',
   'switch-repair-installation': 'ph-switch',
   'fixture-repair-installation': 'ph-fixture',
   'outlet-switch-installation': 'ph-plug',
   'garbage-disposal-repair': 'ph-gear',
   'pipe-leak-repair': 'ph-drop',
-  'bathroom-plumbing': 'ph-bathtub',
-  'kitchen-plumbing': 'ph-cooking-pot',
+  'bathroom-AC repair': 'ph-bathtub',
+  'kitchen-AC repair': 'ph-cooking-pot',
   'water-filtration': 'ph-waves',
   'sump-pump-services': 'ph-pump',
   'gas-line-services': 'ph-flame',
   'repiping-services': 'ph-arrows-counter-clockwise',
   'circuit-breaker-repair': 'ph-wind',
-  'commercial-plumbing': 'ph-buildings',
+  'commercial-AC repair': 'ph-buildings',
   'backflow-prevention': 'ph-shield-check'
 } %}
 
 {# ── Banner ────────────────────────────────────────────────────────────── #}
-<div class="rs-banner">
+<div class="rs-banner modern-banner">
   <div class="container">
     <div class="banner-row">
       <div class="banner-content-col">
         <div class="banner-content">
-          <div class="sub-label">
-            <i class="ph ph-map-pin" style="font-size:12px"></i>
-            Top-Rated Local Plumbing Experts
+          <div class="sub-label glass-label">
+            <i class="ph ph-wind" style="font-size:14px"></i>
+            Top-Rated Local AC Experts
           </div>
           <h1 class="title">
-            The Best Plumber <span>Near Me</span>
+            The Best AC Technician <br><span class="gradient-text">Near Me</span>
           </h1>
           <p class="description">
-            {{ site.BRAND }} connects you with highly-rated, licensed local plumbers across the USA.
-            We specialize in rapid-response <strong>emergency plumbing near you</strong>, affordable <strong>drain cleaning</strong>, 
-            water heater repair &amp; installation, complete pipe leak repair, toilet repair, 
-            and 24-hour same day plumbing service. When you search for a "plumber near me," we are ready to assist. Call 24/7.
+            {{ site.BRAND }} connects you with highly-rated, licensed local AC technicians across the USA.
+            We specialize in rapid-response <strong>emergency AC repair near you</strong>, affordable <strong>duct cleaning</strong>, 
+            AC installation &amp; maintenance, and 24-hour same day service. When you search for an "AC technician near me," we are ready to assist. Call 24/7.
           </p>
           <div class="btn-part">
-            <a class="readon orange" href="{{ site.PHONE_HREF }}">
-              <i class="ph ph-phone-call" style="font-size:17px"></i>
+            <a class="readon modern-btn" href="{{ site.PHONE_HREF }}">
+              <i class="ph ph-phone-call" style="font-size:18px"></i>
               {{ site.PHONE }}
             </a>
+            <div class="trust-indicators">
+               <span class="trust-badge"><i class="ph ph-shield-check"></i> Licensed</span>
+               <span class="trust-badge"><i class="ph ph-clock"></i> 24/7 Service</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="banner-img-box">
+      <div class="banner-img-box modern-img-box">
+        <div class="img-backdrop"></div>
         <picture>
           <source media="(max-width: 767px)" srcset="/assets/images/mobile_hero.webp">
-          <img src="/assets/images/global_hero.webp" alt="Professional plumber at work" width="800" height="600" loading="eager" decoding="async">
+          <img src="/assets/images/global_hero.webp" alt="Professional AC technician at work" width="800" height="600" loading="eager" decoding="async">
         </picture>
+        <div class="floating-badge">
+           <div class="badge-icon"><i class="ph ph-thermometer-cold"></i></div>
+           <div class="badge-text"><strong>Fast</strong> <br>Cooling</div>
+        </div>
       </div>
     </div>
   </div>
@@ -141,7 +149,7 @@ description: "Need a local plumber near you? We provide 24/7 emergency plumbing 
 {# ── Services Grid ─────────────────────────────────────────────────────── #}
 <div class="rs-services">
   <div class="container">
-    <h2>Professional Local Plumbing Services Near You</h2>
+    <h2>Professional Local AC Repair Services Near You</h2>
     <div class="services-row">
       {% for svc in services %}
       <div class="services-slider">
@@ -187,7 +195,7 @@ description: "Need a local plumber near you? We provide 24/7 emergency plumbing 
   <div class="container">
     <h2>
       <i class="ph ph-map-trifold" style="font-size:28px;color:var(--primary);margin-right:8px;vertical-align:middle"></i>
-      Local Plumbers Available Nationwide
+      Local AC Technicians Available Nationwide
     </h2>
 
     <div class="interactive-usa-map">
@@ -216,8 +224,8 @@ description: "Need a local plumber near you? We provide 24/7 emergency plumbing 
 {# ── CTA Strip ─────────────────────────────────────────────────────────── #}
 <div class="cta-strip">
   <div class="container">
-    <h2>Need a Plumber Today? Call Now — Same Day Service</h2>
-    <p>Our licensed local plumbers are standing by for same day and emergency service.</p>
+    <h2>Need a AC Technician Today? Call Now — Same Day Service</h2>
+    <p>Our licensed local AC technicians are standing by for same day and emergency service.</p>
     <a class="readon orange" href="{{ site.PHONE_HREF }}">
       <i class="ph ph-phone-call" style="font-size:18px"></i>
       {{ site.PHONE }} — Free Estimate

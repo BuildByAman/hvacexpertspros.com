@@ -9,7 +9,7 @@ files.sort((a,b) => fs.statSync(path.join(brainDir, b)).mtimeMs - fs.statSync(pa
 fs.copyFileSync(path.join(brainDir, files[0]), path.join(imgDir, 'mobile_hero.png'));
 
 // 2. Replace image tag in templates
-const pictureTag = '<picture>\\n  <source media="(max-width: 767px)" srcset="/assets/images/mobile_hero.png">\\n  <img src="/assets/images/global_hero.png" alt="Professional plumber at work">\\n</picture>';
+const pictureTag = '<picture>\\n  <source media="(max-width: 767px)" srcset="/assets/images/mobile_hero.png">\\n  <img src="/assets/images/global_hero.png" alt="Professional AC technician at work">\\n</picture>';
 const htmlFiles = ['src/index.njk', 'src/cities/city-page.njk', 'src/states/state-page.njk'];
 htmlFiles.forEach(f => {
   let content = fs.readFileSync(f, 'utf8');

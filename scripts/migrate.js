@@ -6,15 +6,15 @@ function replaceInFile(filePath) {
   let originalContent = content;
 
   // Global replacements (case sensitive variations)
-  content = content.replace(/Plumbing Local Pros/g, 'Local Electrician Emergency');
+  content = content.replace(/AC Repair Local Pros/g, 'Local Electrician Emergency');
   content = content.replace(/plumbinglocalpros/g, 'localelectricianemergency');
-  content = content.replace(/plumbing local pros/ig, 'local electrician emergency');
-  content = content.replace(/Plumber/g, 'Electrician');
-  content = content.replace(/plumber/g, 'electrician');
-  content = content.replace(/Plumbers/g, 'Electricians');
-  content = content.replace(/plumbers/g, 'electricians');
-  content = content.replace(/Plumbing/g, 'Electrical');
-  content = content.replace(/plumbing/g, 'electrical');
+  content = content.replace(/AC repair local pros/ig, 'local electrician emergency');
+  content = content.replace(/AC Technician/g, 'Electrician');
+  content = content.replace(/AC technician/g, 'electrician');
+  content = content.replace(/HVAC Technicians/g, 'Electricians');
+  content = content.replace(/AC technicians/g, 'electricians');
+  content = content.replace(/AC Repair/g, 'Electrical');
+  content = content.replace(/AC repair/g, 'electrical');
 
   // Some specific replacements for the old template text
   content = content.replace(/water heater/ig, 'panel');

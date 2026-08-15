@@ -32,9 +32,9 @@ export default {
       const state = data.item.state.abbr;
       const rand = getSeededRandom(`title-${data.item.city.slug}`);
       const titles = [
-        `Emergency Plumber ${city}, ${state} | 24/7 Service`,
-        `Plumber ${city}, ${state} | Same Day Service`,
-        `Local Plumber ${city}, ${state} | 24/7 Emergency Repairs`
+        `Emergency AC Technician ${city}, ${state} | 24/7 Service`,
+        `AC Technician ${city}, ${state} | Same Day Service`,
+        `Local AC Technician ${city}, ${state} | 24/7 Emergency Repairs`
       ];
       return titles[Math.floor(rand() * titles.length)];
     },
@@ -43,9 +43,9 @@ export default {
       const state = data.item.state.abbr;
       const rand = getSeededRandom(`desc-${data.item.city.slug}`);
       const descs = [
-        `Looking for an emergency plumber in ${city}, ${state}? We provide 24/7 plumbing services, drain cleaning, and leak repairs. Call now for same day service!`,
-        `Need a reliable plumber in ${city}, ${state}? Our local experts offer same day service for water heaters, clogs, and emergency plumbing repairs. Call us 24/7.`,
-        `Top-rated local plumber in ${city}, ${state}. We specialize in 24/7 emergency plumbing, pipe leak repairs, and drain cleaning. Get fast, reliable service today!`
+        `Looking for an emergency AC technician in ${city}, ${state}? We provide 24/7 AC repair services, drain cleaning, and leak repairs. Call now for same day service!`,
+        `Need a reliable AC technician in ${city}, ${state}? Our local experts offer same day service for water heaters, clogs, and emergency AC repair repairs. Call us 24/7.`,
+        `Top-rated local AC technician in ${city}, ${state}. We specialize in 24/7 emergency AC repair, pipe leak repairs, and drain cleaning. Get fast, reliable service today!`
       ];
       return descs[Math.floor(rand() * descs.length)];
     },
@@ -54,9 +54,9 @@ export default {
       const state = data.item.state.abbr;
       const rand = getSeededRandom(`h1-${data.item.city.slug}`);
       const h1s = [
-        `Emergency Plumber in ${city}, ${state}`,
-        `Your Trusted ${city} Plumber`,
-        `Plumbing Services in ${city}, ${state}`,
+        `Emergency AC Technician in ${city}, ${state}`,
+        `Your Trusted ${city} AC Technician`,
+        `AC Repair Services in ${city}, ${state}`,
       ];
       return h1s[Math.floor(rand() * h1s.length)];
     },
@@ -113,13 +113,13 @@ export default {
     localRiskText: (data) => {
       const city = data.item.city;
       const state = data.item.state;
-      let text = `${city.name} homeowners and businesses trust our licensed local plumbers for all plumbing needs — from emergency pipe repairs and drain cleaning to water heater installations and sewer line inspections.`;
+      let text = `${city.name} homeowners and businesses trust our licensed local AC technicians for all AC repair needs — from emergency pipe repairs and drain cleaning to water heater installations and sewer line inspections.`;
       const coldStates = ['WI','MN','MI','NY','IL','ND','SD','OH','PA','ME','VT','NH','IA','MA','MT','WY','CO','ID'];
       const hotStates = ['FL','TX','AZ','NV','NM'];
       if (coldStates.includes(state.abbr)) {
-        text = `During severe winters, ${city.name} homes are especially vulnerable to frozen pipes, burst water lines, and failing water heaters. Our plumbers respond fast with emergency repairs, pipe thawing services, and full replumbing to protect your home and family.`;
+        text = `During severe winters, ${city.name} homes are especially vulnerable to frozen pipes, burst water lines, and failing water heaters. Our AC technicians respond fast with emergency repairs, pipe thawing services, and full reAC repair to protect your home and family.`;
       } else if (hotStates.includes(state.abbr)) {
-        text = `${city.name}'s intense summer heat places extreme strain on water heaters, outdoor pipes, and slab plumbing. Our master plumbers are experts at diagnosing heat-related pipe issues, slab leak repairs, and emergency water heater replacements in this climate.`;
+        text = `${city.name}'s intense summer heat places extreme strain on water heaters, outdoor pipes, and slab AC repair. Our master AC technicians are experts at diagnosing heat-related pipe issues, slab leak repairs, and emergency water heater replacements in this climate.`;
       }
       return text;
     },

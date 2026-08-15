@@ -1,7 +1,7 @@
 ---
 layout: layout.njk
-title: "Top Rated Professional Plumbing Services | 24/7 Local Repair"
-description: "Explore our professional plumbing services. From 24/7 emergency repairs and panel upgrades to full home rewiring, our licensed local pros can help."
+title: "Top Rated Professional AC Repair Services | 24/7 Local Repair"
+description: "Explore our professional AC repair services. From 24/7 emergency repairs and panel upgrades to full home rewiring, our licensed local pros can help."
 permalink: "services/index.html"
 ---
 
@@ -9,7 +9,7 @@ permalink: "services/index.html"
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Plumber",
+  "@type": "HVACBusiness",
   "name": "{{ site.BRAND }} - Services",
   "url": "{{ site.DOMAIN }}/services/",
   "image": "{{ site.DOMAIN }}/favicon.svg",
@@ -31,24 +31,14 @@ permalink: "services/index.html"
 
 {# ── Service Icon Map ──────────────────────────────────────────────────── #}
 {% set serviceIcons = {
-  'emergency-plumber': 'ph-siren',
-  'wiring-rewiring': 'ph-lightbulb',
-  'water-heater-repair': 'ph-thermometer',
-  'plumbing-panel-upgrade': 'ph-circuit-board',
-  'switch-repair-installation': 'ph-switch',
-  'fixture-repair-installation': 'ph-fixture',
-  'outlet-switch-installation': 'ph-plug',
-  'garbage-disposal-repair': 'ph-gear',
-  'pipe-leak-repair': 'ph-drop',
-  'bathroom-plumbing': 'ph-bathtub',
-  'kitchen-plumbing': 'ph-cooking-pot',
-  'water-filtration': 'ph-waves',
-  'sump-pump-services': 'ph-pump',
-  'gas-line-services': 'ph-flame',
-  'repiping-services': 'ph-arrows-counter-clockwise',
-  'circuit-breaker-repair': 'ph-wind',
-  'commercial-plumbing': 'ph-buildings',
-  'backflow-prevention': 'ph-shield-check'
+  'ac-repair': 'ph-wrench',
+  'ac-installation': 'ph-thermometer',
+  'hvac-maintenance': 'ph-gear',
+  'emergency-ac-repair': 'ph-siren',
+  'duct-cleaning-repair': 'ph-wind',
+  'furnace-heating-repair': 'ph-fire',
+  'commercial-hvac': 'ph-buildings',
+  'indoor-air-quality': 'ph-leaf'
 } %}
 
 {# ── Breadcrumb ────────────────────────────────────────────────────────── #}
@@ -74,17 +64,29 @@ permalink: "services/index.html"
             Our Services
           </div>
           <h1 class="title">
-            Plumbing Services <span id="svcLocationSpan">Near You</span>
+            AC Repair Services <span id="svcLocationSpan">Near You</span>
           </h1>
           <p class="description" id="svcBannerDesc">
-            Find reliable and licensed local plumbers near you. Same day service available — call us 24/7 for emergency
-            plumbing, wiring upgrade, panel repair, outlet repair &amp; more.
+            Find reliable and licensed local AC technicians near you. Same day service available — call us 24/7 for emergency
+            AC repair, installation, maintenance, duct cleaning &amp; more.
           </p>
           <div class="btn-part">
             <a class="readon orange" href="{{ site.PHONE_HREF }}">
               <i class="ph ph-phone-call" style="font-size:17px"></i>
               {{ site.PHONE }}
             </a>
+          </div>
+                </div>
+      </div>
+      <div class="banner-img-col">
+        <div class="modern-img-box">
+          <div class="img-backdrop"></div>
+          <img src="/assets/images/ac_repair.webp" alt="AC Technician Services">
+          <div class="floating-badge">
+            <div class="badge-icon"><i class="ph ph-wrench"></i></div>
+            <div class="badge-text">
+              <strong>Expert</strong><br>Technicians
+            </div>
           </div>
         </div>
       </div>
@@ -95,7 +97,7 @@ permalink: "services/index.html"
 {# ── Services Grid ─────────────────────────────────────────────────────── #}
 <div class="rs-services">
   <div class="container">
-    <h2>Our Specialized Plumbing Services <span class="js-loc-h2">Near You</span></h2>
+    <h2>Our Specialized AC Repair Services <span class="js-loc-h2">Near You</span></h2>
     <div class="services-row">
       {% for svc in services %}
       <div class="services-slider">
@@ -119,7 +121,7 @@ permalink: "services/index.html"
               </a>
             </h3>
             <p class="description">
-              Looking for {{ svc.title | lower }} <span class="js-loc-inline-lower">near you</span>? Contact {{ site.BRAND }} at {{ site.PHONE }} for professional plumbing services. {{ svc.description.split('.')[0] }}.
+              Looking for {{ svc.title | lower }} <span class="js-loc-inline-lower">near you</span>? Contact {{ site.BRAND }} at {{ site.PHONE }} for professional AC repair services. {{ svc.description.split('.')[0] }}.
             </p>
             <div class="services-btn">
               <a href="{{ site.PHONE_HREF }}">
@@ -140,8 +142,8 @@ permalink: "services/index.html"
 {# ── CTA Strip ─────────────────────────────────────────────────────────── #}
 <div class="cta-strip">
   <div class="container">
-    <h2 id="svcCtaH2">Need a Plumber Near You?</h2>
-    <p>Our licensed plumbers are standing by for same day and 24/7 emergency service.</p>
+    <h2 id="svcCtaH2">Need an AC Technician Near You?</h2>
+    <p>Our licensed AC technicians are standing by for same day and 24/7 emergency service.</p>
     <a class="readon orange" href="{{ site.PHONE_HREF }}">
       <i class="ph ph-phone-call" style="font-size:18px"></i>
       {{ site.PHONE }} — Call Now
@@ -178,8 +180,8 @@ permalink: "services/index.html"
   var desc = document.getElementById('svcBannerDesc');
   if (desc) {
     desc.textContent = loc.cityName
-      ? 'Professional plumbing services in ' + loc.cityName + ', ' + loc.stateName + '. Same day service available — call us 24/7 for emergency plumbing, wiring upgrade, panel repair, outlet repair & more.'
-      : 'Your trusted local plumbing services in ' + loc.stateName + '. Same day service available — call us 24/7 for emergency plumbing, wiring upgrade, panel repair, outlet repair & more.';
+      ? 'Professional AC repair services in ' + loc.cityName + ', ' + loc.stateName + '. Same day service available — call us 24/7 for emergency AC repair, installation, maintenance, duct cleaning & more.'
+      : 'Your trusted local AC repair services in ' + loc.stateName + '. Same day service available — call us 24/7 for emergency AC repair, installation, maintenance, duct cleaning & more.';
   }
 
   // Update inline location spans
@@ -189,7 +191,7 @@ permalink: "services/index.html"
 
   // Update CTA h2
   var ctaH2 = document.getElementById('svcCtaH2');
-  if (ctaH2) ctaH2.textContent = 'Need a Plumber ' + locText + '?';
+  if (ctaH2) ctaH2.textContent = 'Need an AC Technician ' + locText + '?';
 
   // Update service card links (keep clean URL)
   document.querySelectorAll('a.js-svc-link').forEach(function (el) {
@@ -198,7 +200,7 @@ permalink: "services/index.html"
   });
 
   // Update document title
-  document.title = 'Professional Plumbing Services ' + locText + ' | {{ site.BRAND }}';
+  document.title = 'Professional AC Repair Services ' + locText + ' | {{ site.BRAND }}';
 
   // Build breadcrumb
   var bc = document.getElementById('svcBreadcrumb');

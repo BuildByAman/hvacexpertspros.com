@@ -31,4 +31,4 @@ Allow: /
 User-agent: Diffbot
 Allow: /
 
-Sitemap: https://plumberproslocal.com/sitemap.xml
+Sitemap: https://hvacexpertspros.com/sitemap.xml

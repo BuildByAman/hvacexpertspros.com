@@ -72,7 +72,7 @@ faqContent = faqContent.replace(
   'metal appliance'
 );
 faqContent = faqContent.replace(
-  /your plumbing/g,
+  /your AC repair/g,
   'the appliance frame'
 );
 faqContent = faqContent.replace(

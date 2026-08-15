@@ -12,8 +12,8 @@ try {
 
 const imagesDir = 'C:/New 25% Sites/LocalElectricianEmergency/public/assets/images';
 
-// Plumbing keywords to filter out old webp files
-const plumbingKeywords = ['plumb', 'faucet', 'toilet', 'drain', 'sewer', 'hydro-jetting', 'leak-detection-repair-plumber', 'garbage-disposal', 'sump-pump', 'water-heater', 'water-filtration', 'kitchen-plumbing'];
+// AC Repair keywords to filter out old webp files
+const plumbingKeywords = ['plumb', 'faucet', 'toilet', 'drain', 'sewer', 'hydro-jetting', 'leak-detection-repair-AC technician', 'garbage-disposal', 'sump-pump', 'water-heater', 'water-filtration', 'kitchen-AC repair'];
 
 async function processImages() {
   const files = fs.readdirSync(imagesDir);
@@ -23,10 +23,10 @@ async function processImages() {
     const basename = path.basename(file, ext);
     const fullPath = path.join(imagesDir, file);
 
-    // 1. Delete plumbing images
+    // 1. Delete AC repair images
     const isPlumbing = plumbingKeywords.some(kw => basename.includes(kw));
     if (isPlumbing) {
-      console.log('Deleting plumbing image: ' + file);
+      console.log('Deleting AC repair image: ' + file);
       fs.unlinkSync(fullPath);
       continue;
     }
